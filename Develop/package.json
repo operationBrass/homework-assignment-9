@@ -1,14 +1,30 @@
 {
-  "name": "static-site",
+  "name": "good-readme",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generate a professional readme for github repo from command line",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Brendan Lewis",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^6.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/operationBrass/homework-assignment-9.git"
+  },
+  "keywords": [
+    "readme",
+    "github",
+    "license",
+    "cli",
+    "npm",
+    "inquirer"
+  ],
+  "bugs": {
+    "url": "https://github.com/operationBrass/homework-assignment-9/issues"
+  },
+  "homepage": "https://github.com/operationBrass/homework-assignment-9#readme"
 }

@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 
+
 const inquirer = require('inquirer');
+const readME = require('./createReadme');
 
 console.log("Welcome to the pro read-me generator! Lets Begin...");
 
@@ -22,18 +24,23 @@ const questions = [{
                 },
                 {
                     type: "input", 
-                    name:"Description", 
-                    message:"Description: "
+                    name:"intro", 
+                    message:"Short introduction (2-3 sentences): "
+                }, 
+                {
+                    type: "input", 
+                    name:"tech", 
+                    message:"Technolgies invovled: "
                 }, 
                 {
                     type: "input", 
                     name:"install", 
-                    message:"Please enter installation instructions: "
+                    message:"Installation requirements: "
                 }, 
                 {
                     type: "input", 
                     name:"usage", 
-                    message:"Please enter usage information: "
+                    message:"Examples of use: "
                 },
                 {
                     type: "input", 
@@ -42,8 +49,8 @@ const questions = [{
                 },
                 {
                     type: "input", 
-                    name:"questions", 
-                    message:"Please enter test instructions: "
+                    name:"contributors", 
+                    message:"Any other contributors?"
                 },
                 {
                     type: "list", 
@@ -53,7 +60,13 @@ const questions = [{
                 }];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+
+
+
+
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -61,7 +74,7 @@ function init() {
     inquirer.prompt(questions)
 
     .then(answers => {
-            
+       console.log(answers);     
 
     })
     .catch(error => {

@@ -2,7 +2,10 @@
 
 
 const inquirer = require('inquirer');
-const readME = require('./createReadme');
+const readMe = require('./createReadme');
+
+const toc = "Table of Contents ================= " +
+"* [Title]" + 
 
 console.log("Welcome to the pro read-me generator! Lets Begin...");
 
@@ -73,12 +76,13 @@ function init() {
 
     inquirer.prompt(questions)
 
-    .then(answers => {
-       console.log(answers);     
-
+    .then((answers) => {
+        
+        readMe.createReadme(answers);
+    
     })
-    .catch(error => {
-
+    .catch((error) => {
+        console.log("error" + error);
     });
 
 }

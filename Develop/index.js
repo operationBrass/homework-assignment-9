@@ -2,12 +2,9 @@
 
 
 const inquirer = require('inquirer');
-const readMe = require('./createReadme');
+const generateMarkdown = require('./utils/generateMarkdown');
 
-const toc = "Table of Contents ================= " +
-"* [Title]" + 
-
-console.log("Welcome to the pro read-me generator! Lets Begin...");
+console.log();
 
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -17,7 +14,7 @@ const questions = [{
                     message:"What is your Github username?"},
                 {
                     type: "input", 
-                    name:"username", 
+                    name:"email", 
                     message:"Email Address?"
                 },                   
                 {
@@ -59,7 +56,7 @@ const questions = [{
                     type: "list", 
                     name:"license", 
                     message:"Please select license type:",
-                    choices: ["MIT","Academic Free License v3.0","Creative Commons license family","Microsoft Public License","GNU General Public License family","Do What The F*ck You Want To Public License"]
+                    choices: ["MIT","Apache 2.0 License","Creative Commons license family","IBM Public License Version 1.0","GNU General Public License family","Do What The F*ck You Want To Public License"]
                 }];
 
 // TODO: Create a function to write README file
@@ -75,14 +72,11 @@ function writeToFile(fileName, data) {
 function init() {
 
     inquirer.prompt(questions)
-
     .then((answers) => {
-        
-        readMe.createReadme(answers);
-    
+       console.log(generateMarkdown(answers));
     })
     .catch((error) => {
-        console.log("error" + error);
+        console.log("error: " + error);
     });
 
 }

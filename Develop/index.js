@@ -2,15 +2,29 @@
 
 const inquirer = require('inquirer');
 
+console.log("Welcome to the pro read-me generator! Lets Begin...");
+
 // TODO: Create an array of questions for user input
-const questions = [{type: "input", 
-                    name:"Title", 
-                    message:"Please enter a title: "},
+const questions = [{
+    
+                    type: "input", 
+                    name:"username", 
+                    message:"What is your Github username?"},
+                {
+                    type: "input", 
+                    name:"username", 
+                    message:"Email Address?"
+                },                   
+                {
+                    type: "input", 
+                    name:"title", 
+                    message:"Application Title: "
+                },
                 {
                     type: "input", 
                     name:"Description", 
-                    message:"Please enter a description: "
-                },
+                    message:"Description: "
+                }, 
                 {
                     type: "input", 
                     name:"install", 
@@ -25,6 +39,17 @@ const questions = [{type: "input",
                     type: "input", 
                     name:"test", 
                     message:"Please enter test instructions: "
+                },
+                {
+                    type: "input", 
+                    name:"questions", 
+                    message:"Please enter test instructions: "
+                },
+                {
+                    type: "list", 
+                    name:"license", 
+                    message:"Please select license type:",
+                    choices: ["MIT","Academic Free License v3.0","Creative Commons license family","Microsoft Public License","GNU General Public License family","Do What The F*ck You Want To Public License"]
                 }];
 
 // TODO: Create a function to write README file
@@ -36,7 +61,7 @@ function init() {
     inquirer.prompt(questions)
 
     .then(answers => {
-
+            
 
     })
     .catch(error => {

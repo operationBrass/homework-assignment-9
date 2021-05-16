@@ -55,16 +55,24 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
 
   const license = renderLicenseSection(data.license);
+  
+//return the mark up file, double spacing for line breaks
 
   return `# ${data.title}
 
+
   ${license}
 
+
+
   ![${data.title}](${data.screenshot})
+
+
           
 ### Description 
 
 ${data.intro}
+
 
 ### Table of Contents
 
@@ -75,36 +83,34 @@ ${data.intro}
 * [Tests](#Tests)
 * [Questions](#Questions)
 
-### Usage Guide 
+
+## Usage Guide 
 
 ${data.usage}
 
 
-### Installation 
+## Installation 
 
 ${data.install}
 
 
-### Technologies Used 
+## Technologies Used 
 
 ${data.tech}
 
 
-### Contributions 
+## Contributions 
 
 ${data.contributors}
 
-
-### Tests 
+## Tests 
 
 ${data.test}
 
+## Questions 
 
-### Questions 
-
-If you have any questions or want to keep up with my latest projects, please follow me on [Github](http://www.github.com/${data.username}) or [email me](${data.email}). 
+If you have any questions or want to keep up with my latest projects, please follow me on [Github](http://www.github.com/${data.username}) or contact me via [Email](${data.email}). 
 `
-
 }
 
 module.exports = generateMarkdown;

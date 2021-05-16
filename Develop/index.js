@@ -9,7 +9,8 @@ const fs = require('fs');
 const username = "operationBrass";
 const email = "mr.brn.lewis@outlook.com";
 const contribute = "This is currently my own work. Please feel free to submit your contributions on GITHUB with credits given";
-const screenshot = "/Develop/images/finalScreen.PNG";
+const filePath = "../"; //README file path
+const screenshot = "./Develop/images/finalScreen.PNG";
 const testing = "Future testing planned using Jest testing framework";
 const license = "MIT";
 
@@ -81,7 +82,7 @@ const questions = [{
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
-fs.writeFile("./" + fileName,data,(error) =>{
+fs.writeFile(filePath + fileName,data,(error) =>{
     if (error)
     {
         console.log("Error writing file: ", error);

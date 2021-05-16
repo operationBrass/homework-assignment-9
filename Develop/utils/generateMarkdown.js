@@ -1,4 +1,4 @@
-// TODO: Create a function that returns the license link
+// TODO: Create a function that returns the license 
 // If there is no license, return an empty string
 function renderLicense(license) {
   let licenseIcon; 
@@ -84,7 +84,7 @@ ${data.test}
 
 ## Questions 
 
-${data.username} or email ${data.email}
+If you have any questions you can follow me on github ${data.username} or email me at ${data.email}
 `;
 
 }

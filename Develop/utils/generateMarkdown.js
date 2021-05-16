@@ -1,6 +1,8 @@
 // TODO: Create a function that returns the license 
 // If there is no license, return an empty string
 function renderLicense(license) {
+  //this returns both the license icon and the link in the one function.. 
+
   let licenseIcon; 
 
     switch (license){
@@ -22,7 +24,7 @@ function renderLicense(license) {
     case "Do What The F*ck You Want To Public License":
       licenseIcon = "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)"
     break;
-    default: "";
+    default: licenseIcon = "";
     }
     
     return licenseIcon;
@@ -51,40 +53,43 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
   ${license}
-          
-## Description ${data.intro}
 
-## Table of Contents
-* [Technologies Used](#tech)
-* [Install Instructions](#Installing)
-* [Usage Guide](#usage)
+  [data.title](${data.screenshot})
+          
+## Description 
+${data.intro}
+
+### Table of Contents
+* [Usage Guide](#Usage Guide)
+* [Install Instructions](#Installation)
+* [Technologies Used](#techno)
 * [Contributions](#contribute)
 * [Tests](#tests)
 * [Questions](#questions)
-
-## Technologies Used 
-
-${data.tech}
-
-## Installation 
-
-${data.install}
 
 ## Usage Guide 
 
 ${data.usage}
 
-## Contributions 
+#### Installation 
+
+${data.install}
+
+#### Technologies Used 
+
+${data.tech}
+
+#### Contributions 
 
 ${data.contributors}
 
-## Tests 
+#### Tests 
 
 ${data.test}
 
-## Questions 
+#### Questions 
 
-If you have any questions you can follow me on github ${data.username} or email me at ${data.email}
+If you would like to colloborate on this app, follow me on github ${data.username} or email me at ${data.email}. 
 `;
 
 }

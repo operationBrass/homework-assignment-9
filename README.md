@@ -36,11 +36,11 @@ Creating MARKDOWN READMES for GITHUB or other open source repositories. For supe
 
 With Node installed, open a new BASH terminal in the directory of the app and run NPM Install
 
-  ![NPM Install](./Develop/images/npm.PNG)
+ ```NPM Install```
 
 Then just run the Index.JS file to begin the README creation 
 
-  ![run](./Develop/images/windowsLaunch.PNG)
+```Node Index.js```
 
 
 ## Technologies Used 

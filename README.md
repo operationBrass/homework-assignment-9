@@ -29,6 +29,8 @@ Creating MARKDOWN READMES for GITHUB or other open source repositories. For supe
 
   ![defaults](./Develop/images/userDefaults.PNG)
 
+  Check out the video instructional [here](https://drive.google.com/file/d/1BgKupDVuy_WDEVAYnXvEtBUuzUrPvgvF/view)
+
 
 ## Installation 
 
